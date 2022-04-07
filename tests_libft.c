@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 11:43:50 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/07 21:13:57 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/07 22:17:01 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,6 +188,19 @@ int main() {
 	ret = ft_memchr(str_memcpy, ch, ft_strlen(str_memcpy));
 	printf("A string é : - |%s|\n", str_memcpy);
 	printf("Após |%c| : - |%s|\n", ch, ret);
+
+	//--------------------------------------------------------------FUNÇÃO FT_MEMMOVE
+	printf("\n----------------------------------------------------------ft_memmove\n");
+    char dest[] = "olds*****";
+    const char src[]  = "newstring";
+    int tam = 6;
+
+    printf("Antes dest = %s, src = %s, size = %d\n", dest, src, tam);
+    ft_memmove(dest, src, tam);
+    printf("Depois de ft_memmove dest = %s, src = %s\n", dest, src);
+    memmove(dest, src, tam);
+    printf("Depois de memmove dest = %s, src = %s\n", dest, src);
+
 
 	printf("\n########## ****************************************** ##########\n\n");
 
