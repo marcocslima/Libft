@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 11:43:50 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/07 22:17:01 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/08 07:39:16 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int main() {
 	printf("O retorno de strncmp - %d\n", strncmp(str1, str2, n));
 
 	//--------------------------------------------------------------FUNÇÃO FT_STRLCPY
-	
+
 	int sizes[5] = {10,8,0,2,5};
 	int t = 15;
     char string[] = "minha string";
@@ -127,9 +127,18 @@ int main() {
 	}	
 	printf("\n");
 
+	//--------------------------------------------------------------FUNÇÃO FT_STRLCAT
+	printf("\n----------------------------------------------------------ft_strlcat\n");	
+	char first[] = "Este é ";
+    char last[] = "um teste da função ft_strlcat";
+    int size = 18;
+
+    printf("ft_strlcat Retorna: %zu\n",ft_strlcat(last, first, size));
+    printf("strlcat retorna: %zu\n",strlcat(last, first, size));
+
 	//--------------------------------------------------------------FUNÇÃO FT_MEMSET
 	printf("\n----------------------------------------------------------ft_memset\n");
-    int num_ft_memset[] = {1,2,3,4,5,6};
+	int num_ft_memset[] = {1,2,3,4,5,6};
 	int num_memset[] = {1,2,3,4,5,6};
 	char str_ft_memset[] = "Teste da função ft_memset";
 	char str_memset[] = "Teste da função ft_memset";	
@@ -138,22 +147,22 @@ int main() {
 	char *p0;
 	char *p1;
 	
-    printf("Antes de aplicação de ft_memset: %s\n\n", str_ft_memset);
+	printf("Antes de aplicação de ft_memset: %s\n\n", str_ft_memset);
 	printf("Inserindo o caractere * depois da 5 posição por 6 vezes.\n");
-    p0 = ft_memset(num_ft_memset + pos, 9, rep);
-    printf("Resultado com ft_memset(): %d\n", *(int*)p0);
+	p0 = ft_memset(num_ft_memset + pos, 9, rep);
+	printf("Resultado com ft_memset(): %d\n", *(int*)p0);
 	p1 = memset(num_memset + pos, 9, rep);
-    printf("Resultado com memset(): %d\n", *(int*)p1);
+	printf("Resultado com memset(): %d\n", *(int*)p1);
 
 	ft_memset(str_ft_memset + pos, '*', rep);
-    printf("Resultado com ft_memset(): %s\n", str_ft_memset);
+	printf("Resultado com ft_memset(): %s\n", str_ft_memset);
 	memset(str_memset + pos, '*', rep);
-    printf("Resultado com memset(): %s\n", str_memset);
+	printf("Resultado com memset(): %s\n", str_memset);
 
 
 	//--------------------------------------------------------------FUNÇÃO FT_MEMCMP
 	printf("\n----------------------------------------------------------ft_memcmp\n");
-    char s1_memcmp[] = "adftu.hjy";
+	char s1_memcmp[] = "adftu.hjy";
 	char s2_memcmp[] = "adftu*";
 	//int comp = 0;
 	printf("Para s1: %s  e  s2: %s\n", s1_memcmp, s2_memcmp);
