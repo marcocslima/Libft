@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 11:43:50 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/08 07:39:16 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/10 20:38:53 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,6 +209,50 @@ int main() {
     printf("Depois de ft_memmove dest = %s, src = %s\n", dest, src);
     memmove(dest, src, tam);
     printf("Depois de memmove dest = %s, src = %s\n", dest, src);
+
+	//--------------------------------------------------------------FUNÇÃO FT_STRNSTR
+	printf("\n----------------------------------------------------------ft_strnstr\n");
+	const char *largestring = "O teste de uma string longa";
+	const char *smallstring = "ng l";
+	int t_strnstr = 23;
+
+	printf("String original: %s\n", largestring);
+	printf("Sub-string procurada: %s\n", smallstring);
+	printf("size: %d\n", t_strnstr);
+	printf("Resultado de ft_strnstr: %s\n",strnstr(largestring, smallstring, t_strnstr));
+	printf("Resultado de strnstr: %s\n",strnstr(largestring, smallstring, t_strnstr));
+
+	//--------------------------------------------------------------FUNÇÃO FT_STRNSTR
+	printf("\n----------------------------------------------------------ft_calloc\n");
+	int *p_calloc;
+	size_t a_calloc;
+
+	a_calloc = 5;
+	p_calloc = (int *)ft_calloc(a_calloc, sizeof(int));
+	if (!p_calloc)
+	{
+		printf ("** Erro: Memoria Insuficiente **");
+	}
+	printf("Alocou: %ld\n", a_calloc);
+	for(size_t i_calloc=0; i_calloc < a_calloc; i_calloc++)
+		printf("%d", *(char*)(p_calloc + i_calloc));
+	printf("\n");
+
+	free(p_calloc);
+
+	//--------------------------------------------------------------FUNÇÃO FT_SUBSTR
+	printf("\n----------------------------------------------------------ft_substr\n");
+	char *p_substr = " um teste para uma strong longa";
+	//char *p = "";
+	char *p_res_substr;
+	unsigned int start_substr = 7;
+	size_t len_substr = 3;
+
+	p_res_substr = ft_substr(p_substr, start_substr, len_substr);
+	if(p_res_substr)
+		printf("%s\n", p_res_substr);
+
+	free(p_res_substr);
 
 
 	printf("\n########## ****************************************** ##########\n\n");

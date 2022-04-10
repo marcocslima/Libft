@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 20:28:41 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/07 21:49:42 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/10 17:56:07 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,9 @@ int		ft_atoi(const char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 // <strings.h> functions:
-void	ft_bzero(void *s, size_t size);    // Deprecated; use memset instead
+void	ft_bzero(void *s, size_t size);
+
+// Second part:
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
