@@ -6,7 +6,7 @@
 #    By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 21:00:15 by mcesar-d          #+#    #+#              #
-#    Updated: 2022/04/10 20:43:42 by mcesar-d         ###   ########.fr        #
+#    Updated: 2022/04/10 21:42:39 by mcesar-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,3 +38,6 @@ run:		apps
 
 apps:	
 			$(CC) $(FLAGS) $(SRCS) $(TESTS) -lbsd -o tests
+			
+deb:	
+			$(CC) -g $(FLAGS) $(SRCS) $(TESTS) -lbsd
