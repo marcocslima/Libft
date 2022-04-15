@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 11:44:29 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/07 19:46:22 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/11 22:42:07 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t size)
 	size_t i;
 	
 	i = 0;
-	while (*(unsigned char*)src != '\0' && i < size)
+	if(size == 0 || src == NULL)
+		return (NULL);
+	while (i < size - 1)
 	{
 		*(unsigned char*)dest = *(unsigned char*)src;
 		dest++;
