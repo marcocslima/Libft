@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 21:58:25 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/12 21:45:08 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/16 11:11:27 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	if (!dest && !src)
 		return (0);

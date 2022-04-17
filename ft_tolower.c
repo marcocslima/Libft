@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 23:07:13 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/03 23:08:13 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/17 05:32:57 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return(c + 32);
+		return (c + 32);
 	return (c);
 }

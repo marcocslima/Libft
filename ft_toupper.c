@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 22:59:39 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/03 23:05:21 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/17 05:33:29 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return(c - 32);
+		return (c - 32);
 	return (c);
 }

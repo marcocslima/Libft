@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:15:37 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/13 02:50:29 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/17 04:56:56 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
-	if(nmemb == __SIZE_MAX__ || size == __SIZE_MAX__)
-		return(NULL);
+
+	if (nmemb == __SIZE_MAX__ || size == __SIZE_MAX__)
+		return (NULL);
 	p = (void *)malloc(nmemb * size);
 	if (!p)
 		return (NULL);

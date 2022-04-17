@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:26:15 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/13 14:56:27 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/17 05:21:07 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	char *new_src;
-	int index;
+	char	*new_src;
+	int		index;
 
 	new_src = malloc((ft_strlen(s) + 1) * sizeof(char));
 	index = 0;
-	while(index < (ft_strlen(s) + 1))
+	while (index < (ft_strlen(s) + 1))
 	{
-		new_src[index] = s[index]; 
-		index++;	
+		new_src[index] = s[index];
+		index++;
 	}
-	return(new_src);
+	return (new_src);
 }

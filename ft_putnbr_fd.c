@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 19:51:49 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/17 05:01:28 by mcesar-d         ###   ########.fr       */
+/*   Created: 2022/04/15 16:09:50 by mcesar-d          #+#    #+#             */
+/*   Updated: 2022/04/17 05:05:58 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
+	unsigned int	nbr;
 
-	i = 0;
-	if (s == NULL)
-		return (NULL);
-	while (i < size)
+	if (n < 0)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
+		ft_putchar_fd('-', fd);
+		nbr = (unsigned int)(n * -1);
 	}
-	return (0);
+	else
+		nbr = (unsigned int)n;
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	ft_putchar_fd(nbr % 10 + '0', fd);
 }

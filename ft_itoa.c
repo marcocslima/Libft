@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 13:20:07 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/15 07:21:52 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/16 11:02:17 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static int	is_zero(int n)
 
 static int	len_number(int n)
 {
-	int		len;
-	long	l;
+	int				len;
+	unsigned int	l;
 
 	len = 0;
 	l = n;
@@ -48,16 +48,16 @@ static int	len_number(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*num;
-	int		len;
-	long	nbr;
+	char			*num;
+	int				len;
+	unsigned int	nbr;
 
 	nbr = n;
 	len = len_number(n);
 	if (is_zero(n))
 		len++;
 	if (is_negative(n))
-		nbr = (long)n * -1;
+		nbr = (unsigned int)n * -1;
 	num = (char *)malloc(len + 1);
 	if (!num)
 		return (0);

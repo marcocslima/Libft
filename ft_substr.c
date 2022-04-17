@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 17:54:49 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/13 21:02:44 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/17 05:32:30 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else
 		nstr = (char *)malloc(len + 1);
 	if (!nstr)
-		return((char *)s);
+		return ((char *)s);
 	while (start < lens && i < len)
 		nstr[i++] = s[start++];
 	nstr[i] = '\0';
-	return(nstr);
+	return (nstr);
 }
