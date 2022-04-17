@@ -6,7 +6,7 @@
 #    By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 21:00:15 by mcesar-d          #+#    #+#              #
-#    Updated: 2022/04/16 13:06:06 by mcesar-d         ###   ########.fr        #
+#    Updated: 2022/04/17 23:13:29 by mcesar-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,17 +18,25 @@ SRCS			=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_atoi.c \
 					ft_strtrim.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 					ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_split.c
 OBJS			=	$(SRCS:.c=.o)
+BONUS			=	ft_lstnew.c ft_lstadd_front.c ft_lstlast.c ft_lstadd_back.c ft_lstsize.c \
+					ft_lstdelone.c ft_lstiter.c
+BONUS_O			=	$(BONUS:.c=.o)
 CC				=	cc
 FLAGS			=	-Wall -Wextra -Werror
 TESTS			=	tests_libft.c
 NAME			=	libft.a
 
-all:	$(NAME)
+all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			ar -rcs $(NAME) $(OBJS)
+
+bonus:		$(NAME)	$(BONUS_O)
+			ar -rcs	$(NAME) $(BONUS_O)
+			ranlib	$(NAME)
+
 clean:
-			rm -rf $(OBJS) ./tests ./*.out ./resultado
+			rm -rf $(OBJS) $(BONUS_O) ./tests ./*.out ./resultado
 
 fclean:		clean
 			rm -rf $(NAME)
