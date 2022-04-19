@@ -6,9 +6,11 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 10:24:44 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/18 00:44:15 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/18 00:52:01 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_isspace(char c)
 {
