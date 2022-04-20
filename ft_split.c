@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 13:04:31 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/20 22:43:15 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/20 23:10:25 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ char	**ft_split(char const *s, char c)
 	while (i <= ft_strlen(s))
 	{
 		if (s[i] != c && flag < 0)
-		flag = i;
+			flag = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && flag >= 0)
 		{
-		result[j++] = ft_substr(s, flag, i - flag);
-		flag = -1;
+			result[j++] = ft_substr(s, flag, i - flag);
+			flag = -1;
 		}
 		i++;
 	}
