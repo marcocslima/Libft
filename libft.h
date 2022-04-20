@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 20:28:41 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/19 07:11:20 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/20 23:05:47 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, size_t size);
 
 // Mandatory - Second part:
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
@@ -74,5 +74,4 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
-
 #endif

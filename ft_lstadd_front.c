@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 12:08:11 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/17 12:10:47 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/20 09:42:27 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!new)
-		return ;
-	if (!lst)
+	if (lst)
 	{
+		new->next = *lst;
 		*lst = new;
-		return ;
 	}
-	new->next = *lst;
 	*lst = new;
 }
