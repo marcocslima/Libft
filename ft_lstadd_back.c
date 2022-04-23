@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 16:39:51 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/20 09:46:28 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/22 22:26:12 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*aux;
-	int		is_l;
+	int		is_lst;
 
-	is_l = 0;
+	is_lst = 0;
 	aux = ft_lstlast(new);
 	if (aux != new)
-		is_l = 1;
+		is_lst = 1;
 	if (new)
 	{
-		if (is_l == 0)
+		if (is_lst == 0)
 			new->next = NULL;
 		if (*lst == NULL)
 			*lst = new;

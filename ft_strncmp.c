@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 00:30:22 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/06 00:38:48 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/22 23:13:34 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t size)
 		s2++;
 		size--;
 	}	
-	return (*s1 - *s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
