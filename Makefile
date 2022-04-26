@@ -6,7 +6,7 @@
 #    By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 21:00:15 by mcesar-d          #+#    #+#              #
-#    Updated: 2022/04/19 22:05:17 by mcesar-d         ###   ########.fr        #
+#    Updated: 2022/04/26 09:06:51 by mcesar-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,11 @@ bonus:		$(NAME)	$(BONUS_O)
 			ranlib	$(NAME)
 
 clean:
-			rm -rf $(OBJS) $(BONUS_O) ./*.out
+			rm -rf $(OBJS) $(BONUS_O)
 
 fclean:		clean
 			rm -rf $(NAME)
 
 re:			fclean $(NAME)
+
+.PHONY: all clean fclean re bonus
