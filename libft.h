@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 20:28:41 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/20 23:05:47 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/26 02:52:39 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <ctype.h>
-# include <string.h>
-# include <strings.h>
-# include <bsd/string.h>
 
 typedef struct s_list
 {
