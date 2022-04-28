@@ -6,7 +6,7 @@
 /*   By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 13:04:31 by mcesar-d          #+#    #+#             */
-/*   Updated: 2022/04/21 17:45:02 by mcesar-d         ###   ########.fr       */
+/*   Updated: 2022/04/28 00:55:03 by mcesar-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	words_counter(const char *s, char c)
 {
-	int	i;
-	int	flag;
-	int	counter;
+	size_t	i;
+	int		flag;
+	int		counter;
 
 	i = 0;
 	flag = 0;
@@ -37,8 +37,8 @@ static int	words_counter(const char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 	int		flag;
 	char	**result;
 
