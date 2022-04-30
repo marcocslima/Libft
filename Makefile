@@ -6,7 +6,7 @@
 #    By: mcesar-d <mcesar-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 21:00:15 by mcesar-d          #+#    #+#              #
-#    Updated: 2022/04/28 10:59:19 by mcesar-d         ###   ########.fr        #
+#    Updated: 2022/04/29 02:34:33 by mcesar-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,11 +30,11 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 			ar -rcs $(NAME) $(OBJS)
 
-.c.o:	
+%.o:		%.c	libft.h
 			$(CC) $(CFLAGS) -I . -c $< -o $@
 
-bonus:		$(NAME)	$(BONUS_O)
-			ar -rcs	$(NAME) $(BONUS_O)
+bonus:		$(BONUS_O)
+			make OBJS="$(OBJS) $(BONUS_O)" all
 
 clean:
 			rm -rf $(OBJS) $(BONUS_O)
